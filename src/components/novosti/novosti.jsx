@@ -16,7 +16,7 @@ export default function Novosti({ novosti }) {
 		},
 		tablet: {
 			breakpoint: { max: 1024, min: 464 },
-			items: 2,
+			items: 1,
 		},
 		mobile: {
 			breakpoint: { max: 464, min: 0 },
@@ -25,12 +25,12 @@ export default function Novosti({ novosti }) {
 	};
 	return (
 		<>
-			<Box w={'full'} pt={10}>
-				<Heading color={'#0D4C93'} textAlign={'center'}>
-					УСЛУГИ
+			<Box pt={10}>
+				<Heading color={'#0D4C93'} textAlign={'center'} fontSize={{ base: 'lg', lg: 'xl' }}>
+					НОВОСТИ
 				</Heading>
 			</Box>
-			<Box w={'full'} px={10} py={10}>
+			<Box px={15}>
 				<Carousel responsive={responsive}>
 					{novosti.map(el => (
 						<Box w={'250px'} h={'500px'} boxShadow='xl' rounded='md' bg='white' key={el.node.id}>

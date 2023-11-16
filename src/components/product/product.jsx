@@ -3,8 +3,8 @@ import React from 'react';
 
 export default function Product({ product }) {
 	return (
-		<Box w={'full'} pt={12}>
-			<Heading color={'#0D4C93'} textAlign={'center'}>
+		<Box pt={12} px={{ base: 20, sm: 2, lg: 4, xl: 2 }}>
+			<Heading color={'#0D4C93'} textAlign={'center'} fontSize={{ base: 'lg', lg: 'xl' }}>
 				ПРОДУКЦИЯ
 			</Heading>
 			{/* {product.map(el => (
@@ -19,7 +19,7 @@ export default function Product({ product }) {
 			<Grid templateColumns={{ base: 'repeat(1, 1fr)', sm: 'repeat(2, 1fr)', md: 'repeat(3, 1fr)' }} gap={6} mt={20}>
 				{product.map(el => (
 					<Box
-						w={'250px'}
+						w={{ base: '200px', lg: '250px' }}
 						h={'370px'}
 						boxShadow='xl'
 						rounded='md'

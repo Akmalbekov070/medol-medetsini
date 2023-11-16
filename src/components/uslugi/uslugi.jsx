@@ -4,11 +4,11 @@ import React from 'react';
 export default function Uslugi({ uslugi }) {
 	console.log(uslugi);
 	return (
-		<Box w={'full'} pt={10}>
-			<Heading color={'#0D4C93'} textAlign={'center'}>
+		<Box pt={10} px={{ base: 5, xl: 4 }}>
+			<Heading color={'#0D4C93'} textAlign={'center'} fontSize={{ base: 'lg', lg: 'xl' }}>
 				УСЛУГИ
 			</Heading>
-			<Grid templateColumns={{ base: 'repeat(1, 1fr)', sm: 'repeat(2, 1fr)', md: 'repeat(3, 1fr)' }} gap={6} mt={20}>
+			<Grid templateColumns={{ base: 'repeat(1, 1fr)', sm: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)' }} gap={6} mt={20}>
 				{uslugi.map(el => (
 					<Box
 						w={'250px'}
@@ -35,12 +35,21 @@ export default function Uslugi({ uslugi }) {
 					</Box>
 				))}
 			</Grid>
-			<Box w={'full'}>
-				<Heading color={'#0D4C93'} textAlign={'center'} pt={10}>
+			<Box>
+				<Heading color={'#0D4C93'} textAlign={'center'} pt={10} fontSize={{ base: 'lg', lg: 'xl' }}>
 					О КОМПАНИИ
 				</Heading>
 				<Box w={'full'} display={'flex'} alignItems={'center'} pt={6} gap={10}>
-					<Box w={'400px'} h={'400px'} border='4px' borderColor='blue.200' borderRadius={'50%'} position={'relative'}>
+					<Box
+						w={'400px'}
+						display={{ base: 'none', lg: 'flex' }}
+						h={'400px'}
+						border='4px'
+						borderColor='blue.200'
+						borderRadius={'50%'}
+						position={'relative'}
+						overflow={'hidden'}
+					>
 						<Image
 							w={'200px'}
 							position={'absolute'}
@@ -51,7 +60,7 @@ export default function Uslugi({ uslugi }) {
 						/>
 					</Box>
 					<Box>
-						<Text w={'450px'}>
+						<Text w={{ base: '300px ', lg: '350px', xl: '450px' }}>
 							{`	Группа компаний MEDOL создавалась высококвалифицированными специалистами в сфере медицины, инженерии и экономики, за
 							плечами которых значительный опыт на рынке высоких медицинских технологий, которая имеет свои представительства в
 							разных уголках Земли. 2011 году MEDOL зарегистрировал в Узбекистане ИП “Medical Online Services". Цель компании
