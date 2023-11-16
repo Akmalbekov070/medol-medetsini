@@ -6,8 +6,8 @@ import { BiSearchAlt, BiLogoFacebook, BiPhoneCall } from 'react-icons/bi';
 export default function Header({ header }) {
 	return (
 		<>
-			<Box w={'full'} display={'flex'} justifyContent={'space-between'} alignItems={'center'} color={'black'}>
-				<HStack gap={4} justifyContent={'space-between'} alignItems={'center'}>
+			<Box w={'full'} display={'flex'} alignItems={'center'} color={'black'}>
+				<HStack gap={4} display={{ base: 'none', xl: 'flex' }}>
 					<IconButton
 						isRound={true}
 						variant='solid'
@@ -22,7 +22,7 @@ export default function Header({ header }) {
 						г.Ташкент, Чиланзар 10 квартал, дом 3/1
 					</Text>
 				</HStack>
-				<HStack px={2}>
+				<HStack w={'full'} px={2} display={{ base: 'none', xl: 'flex' }}>
 					<IconButton
 						isRound={true}
 						variant='solid'
@@ -38,11 +38,14 @@ export default function Header({ header }) {
 					</Text>
 				</HStack>
 				<Link href='/'>
-					<Box w={'full'} px={10}>
-						<Image src='https://files.glotr.uz/company/000/028/406/logo/2022-03-28-16-16-22-142639-813712f8978fe4eb14919fc399e81d7e.webp?_=gzauc' />
+					<Box w={{ base: '30%', sm: '40%', lg: '60%', xl: '80%' }} px={10}>
+						<Image
+							src='https://files.glotr.uz/company/000/028/406/logo/2022-03-28-16-16-22-142639-813712f8978fe4eb14919fc399e81d7e.webp?_=gzauc'
+							alt='img'
+						/>
 					</Box>
 				</Link>
-				<HStack pl={'20px'} justifyContent={'space-between'} alignItems={'center'} gap={5}>
+				<HStack justifyContent={'space-between'} alignItems={'center'} gap={5} display={{ base: 'none', xl: 'flex' }}>
 					<IconButton
 						isRound={true}
 						variant='solid'

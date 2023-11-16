@@ -8,7 +8,7 @@ import { getHeaders, getNovosti, getProduct, getUslugi } from '@/components/serv
 
 export default function Home({ header, product, uslugi, novosti }) {
 	return (
-		<Box w={'full'} bg={'white'} px={'200px'} py={'20px'} color={'black'}>
+		<Box w={'full'} bg={'white'} px={{ sm: '20px', lg: '25px', xl: '200px' }} py={'20px'} color={'black'}>
 			<Header header={header} />
 			<Product product={product} />
 			<Uslugi uslugi={uslugi} />
