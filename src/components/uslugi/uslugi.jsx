@@ -4,7 +4,7 @@ import React from 'react';
 export default function Uslugi({ uslugi }) {
 	console.log(uslugi);
 	return (
-		<Box pt={10} px={{ base: 5, xl: 4 }}>
+		<Box pt={10} px={{ base: 16, sm: 24, xl: 4 }}>
 			<Heading color={'#0D4C93'} textAlign={'center'} fontSize={{ base: 'lg', lg: 'xl' }}>
 				УСЛУГИ
 			</Heading>

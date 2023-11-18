@@ -23,7 +23,7 @@ export default function Header({ header }) {
 	return (
 		<>
 			<Box w={'full'} display={'flex'} alignItems={'center'} color={'black'}>
-				<Box w={'full'} display={{ base: 'flex', lg: 'none' }} mt={-4}>
+				<Box w={'full'} display={{ base: 'flex', lg: 'none' }} mt={-4} px={{ sm: '50px', lg: '200px' }}>
 					<Menu colorScheme={'facebook'} variant={'solid'}>
 						<MenuButton as={Button} color={'blue'}>
 							<BsListNested size={'40'} />
@@ -76,11 +76,11 @@ export default function Header({ header }) {
 						/>
 					</Box>
 				</Link>
-				<Box w={'full'} display={{ base: 'flex', lg: 'none' }} mt={-4}>
+				<Box w={'full'} display={{ base: 'flex', lg: 'none' }} mt={-4} pl={{ sm: '80px', lg: '90px' }} pr={{ base: '30px' }}>
 					<Menu colorScheme={'facebook'} variant={'solid'}>
 						<MenuButton as={Button} color={'blue'}>
 							<Box w={'full'} display={'flex'} alignItems={'center'} gap={2}>
-								<Heading>All</Heading>
+								<Text>All</Text>
 								<BsListNested size={'40'} />
 							</Box>
 						</MenuButton>
@@ -151,8 +151,8 @@ export default function Header({ header }) {
 				</HStack>
 			</Box>
 			{header.map(el => (
-				<Box w={'full'} display={'flex'} justifyContent={'space-between'} alignItems={'center'} key={el.node.id} gap={10}>
-					<Box>
+				<Box w={'full'} display={'flex'} alignItems={'center'} key={el.node.id} flexWrap={{ base: 'wrap', sm: 'nowrap' }}>
+					<Box px={{ base: 20 }}>
 						<Heading w={'450px'} color={'#0D4C93'} fontSize={{ base: 'lg', lg: '2xl', xl: '7xl' }} pt={20}>
 							{el.node.text.slice(0, 20)}
 						</Heading>
@@ -163,8 +163,8 @@ export default function Header({ header }) {
 							Подробнее
 						</Button>
 					</Box>
-					<Box w={'full'} display={{ base: 'none', lg: 'flex' }}>
-						<Image mt={20} src={el.node.img.url} alt={el.node.text} />
+					<Box>
+						<Image w={{ base: '500px', sm: '600px', lg: '400px', xl: 'full' }} mt={20} src={el.node.img.url} alt={el.node.text} />
 					</Box>
 				</Box>
 			))}

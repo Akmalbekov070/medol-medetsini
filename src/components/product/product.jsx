@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function Product({ product }) {
 	return (
-		<Box pt={12} px={{ base: 20, sm: 2, lg: 4, xl: 2 }}>
+		<Box pt={12} px={{ base: 16, sm: 10, lg: 4, xl: 2 }}>
 			<Heading color={'#0D4C93'} textAlign={'center'} fontSize={{ base: 'lg', lg: 'xl' }}>
 				ПРОДУКЦИЯ
 			</Heading>
